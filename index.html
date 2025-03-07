@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Predictor</title>
+    <style>
+        /* Fancy Title */
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #f67B28, #a5a5a5);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* Filter Container */
+        .filters-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: auto;
+        }
+
+        /* Individual Filters */
+        .filter-item {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Fancy Button */
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg,  #f67B28, #a5a5a5);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>🐶 Dog Breed Predictor 🐾</h1>
+    <form action="/predict" method="POST">
+        <div class="filters-container">
+            <div class="filter-item">
+                <label for="Demeanor">Demeanor:</label>
+                <select name="Demeanor">
+                    <option value="Aloof/Wary">Aloof/Wary</option>
+                    <option value="Reserved with Strangers">Reserved with Strangers</option>
+                    <option value="Alert/Responsive">Alert/Responsive</option>
+                    <option value="Friendly">Friendly</option>
+                    <option value="Outgoing">Outgoing</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="activity_level">Activity Level:</label>
+                <select name="activity_level">
+                    <option value="Couch Potato">Couch Potato</option>
+                    <option value="Calm">Calm</option>
+                    <option value="Energetic">Energetic</option>
+                    <option value="Regular Exercise">Regular Exercise</option>
+                    <option value="Lots of Activity">Lots of Activity</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="Trainability">Trainability:</label>
+                <select name="Trainability">
+                    <option value="May be Stubborn">May be Stubborn</option>
+                    <option value="Independent">Independent</option>
+                    <option value="Easy to Train">Easy to Train</option>
+                    <option value="Agreeable">Agreeable</option>
+                    <option value="Eager to Please">Eager to Please</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="experience_with_dogs">Experience with Dogs:</label>
+                <select name="experience_with_dogs">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Experienced">Experienced</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="preferred_size">Preferred Size:</label>
+                <select name="preferred_size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="grooming_commitment">Grooming Commitment:</label>
+                <select name="grooming_commitment">
+                    <option value="Daily Brushing">Daily Brushing</option>
+                    <option value="2-3 Times a Week">2-3 Times a Week</option>
+                    <option value="Weekly Brushing">Weekly Brushing</option>
+                    <option value="Occasional">Occasional</option>
+                    <option value="Specialty">Specialty</option>           
+                </select>
+            </div>
+        </div>
+        <button type="submit">🔍 Predict Dog Breed</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+
+    <!-- Tableau Viewer Embed -->
+    <div id="tableauViz" style="width:1000px; height:800px;"></div>
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript">
+        var containerDiv = document.getElementById("tableauViz");
+        var url = "https://public.tableau.com/views/Furr-ever_friend/Learabouteachbreed?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+        var options = {
+            width: "1200px",
+            height: "900px",
+            hideTabs: true,
+            hideToolbar: true
+        };
+        var viz = new tableau.Viz(containerDiv, url, options);
+    </script>
+</body>
+</html>
