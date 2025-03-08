@@ -133,22 +133,22 @@
 
             <!-- Numerical Inputs -->
             <div class="filter-item">
-                <label for="min_height">Min Height (cm):</label>
+                <label for="min_height">Min Height (in):</label>
                 <input type="number" name="min_height" id="min_height" step="0.01" required>
             </div>
 
             <div class="filter-item">
-                <label for="max_height">Max Height (cm):</label>
+                <label for="max_height">Max Height (in):</label>
                 <input type="number" name="max_height" id="max_height" step="0.01" required>
             </div>
 
             <div class="filter-item">
-                <label for="min_weight">Min Weight (kg):</label>
+                <label for="min_weight">Min Weight (lbs):</label>
                 <input type="number" name="min_weight" id="min_weight" step="0.01" required>
             </div>
 
             <div class="filter-item">
-                <label for="max_weight">Max Weight (kg):</label>
+                <label for="max_weight">Max Weight (lbs):</label>
                 <input type="number" name="max_weight" id="max_weight" step="0.01" required>
             </div>
 
@@ -167,7 +167,11 @@
     </form>
 
     {% if prediction_text %}
-        <h2>{{ prediction_text }}</h2>
+    <h2>{{ prediction_text }}</h2>
+    <p><strong>Training Time:</strong> {{ training_time }}</p>
+    <p><strong>Prediction Time:</strong> {{ prediction_time }}</p>
+    <p><strong>API Response Time:</strong> {{ api_response_time }}</p>
+    <p><strong>Model Accuracy:</strong> {{ model_accuracy }}</p>
     {% endif %}
 
     <!-- Tableau Viewer Embed -->
@@ -175,7 +179,7 @@
     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script type="text/javascript">
         var containerDiv = document.getElementById("tableauViz");
-        var url = "https://public.tableau.com/views/Furr-ever_friend/Learabouteachbreed?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+        var url = "https://public.tableau.com/views/Furr-ever_friend/Learnabouteachbreed?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
         var options = {
             width: "1200px",
             height: "900px",
