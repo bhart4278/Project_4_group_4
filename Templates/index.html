@@ -77,101 +77,120 @@
     <form action="/" method="POST">
         <div class="filters-container">
             <div class="filter-item">
-                <label for="Demeanor">Demeanor:</label>
-                <select name="Demeanor">
-                    <option value="Aloof/Wary">Aloof/Wary</option>
-                    <option value="Reserved with Strangers">Reserved with Strangers</option>
-                    <option value="Alert/Responsive">Alert/Responsive</option>
-                    <option value="Friendly">Friendly</option>
-                    <option value="Outgoing">Outgoing</option>
+                <label for="demeanor">Demeanor:</label>
+                <select name="demeanor">
+                    <option value="Aloof/Wary" {% if demeanor == 'Aloof/Wary' %}selected{% endif %}>Aloof/Wary</option>
+                    <option value="Reserved with Strangers" {% if demeanor == 'Reserved with Strangers' %}selected{% endif %}>Reserved with Strangers</option>
+                    <option value="Alert/Responsive" {% if demeanor == 'Alert/Responsive' %}selected{% endif %}>Alert/Responsive</option>
+                    <option value="Friendly" {% if demeanor == 'Friendly' %}selected{% endif %}>Friendly</option>
+                    <option value="Outgoing" {% if demeanor == 'Outgoing' %}selected{% endif %}>Outgoing</option>
                 </select>
             </div>
 
             <div class="filter-item">
                 <label for="energy">Energy Level:</label>
                 <select name="energy_level">
-                    <option value="Couch Potato">Couch Potato</option>
-                    <option value="Calm">Calm</option>
-                    <option value="Energetic">Energetic</option>
-                    <option value="Regular Exercise">Regular Exercise</option>
-                    <option value="Needs Lots of Activity">Needs Lots of Activity</option>
+                    <option value="Couch Potato" {% if energy_level == 'Couch Potato' %}selected{% endif %}>Couch Potato</option>
+                    <option value="Calm" {% if energy_level == 'Calm' %}selected{% endif %}>Calm</option>
+                    <option value="Energetic" {% if energy_level == 'Energetic' %}selected{% endif %}>Energetic</option>
+                    <option value="Regular Exercise" {% if energy_level == 'Regular Exercise' %}selected{% endif %}>Regular Exercise</option>
+                    <option value="Needs Lots of Activity" {% if energy_level == 'Needs Lots of Activity' %}selected{% endif %}>Needs Lots of Activity</option>
                 </select>
             </div>
 
             <div class="filter-item">
                 <label for="trainability">Trainability:</label>
                 <select name="trainability">
-                    <option value="May be Stubborn">May be Stubborn</option>
-                    <option value="Independent">Independent</option>
-                    <option value="Easy Training">Easy to Train</option>
-                    <option value="Agreeable">Agreeable</option>
-                    <option value="Eager to Please">Eager to Please</option>
+                    <option value="May be Stubborn" {% if trainability == 'May be Stubborn' %}selected{% endif %}>May be Stubborn</option>
+                    <option value="Independent" {% if trainability == 'Independent' %}selected{% endif %}>Independent</option>
+                    <option value="Easy Training" {% if trainability == 'Easy Training' %}selected{% endif %}>Easy to Train</option>
+                    <option value="Agreeable" {% if trainability == 'Agreeable' %}selected{% endif %}>Agreeable</option>
+                    <option value="Eager to Please" {% if trainability == 'Eager to Please' %}selected{% endif %}>Eager to Please</option>
                 </select>
             </div>
 
             <div class="filter-item">
                 <label for="grooming">Grooming Frequency:</label>
                 <select name="grooming">
-                    <option value="Daily Brushing">Daily Brushing</option>
-                    <option value="2-3 Times a Week Brushing">2-3 Times a Week</option>
-                    <option value="Weekly Brushing">Weekly Brushing</option>
-                    <option value="Occasional Bath/Brush">Occasional</option>
-                    <option value="Specialty/Professional">Specialty</option>           
+                    <option value="Daily Brushing" {% if grooming == 'Daily Brushing' %}selected{% endif %}>Daily Brushing</option>
+                    <option value="2-3 Times a Week Brushing" {% if grooming == '2-3 Times a Week Brushing' %}selected{% endif %}>2-3 Times a Week</option>
+                    <option value="Weekly Brushing" {% if grooming == 'Weekly Brushing' %}selected{% endif %}>Weekly Brushing</option>
+                    <option value="Occasional Bath/Brush" {% if grooming == 'Occasional Bath/Brush' %}selected{% endif %}>Occasional</option>
+                    <option value="Specialty/Professional" {% if grooming == 'Specialty/Professional' %}selected{% endif %}>Specialty</option>
                 </select>
             </div>
 
             <div class="filter-item">
                 <label for="shedding">Shedding:</label>
                 <select name="shedding">
-                    <option value="Infrequent">Infrequent</option>
-                    <option value="Occasional">Occasional</option>
-                    <option value="Seasonal">Seasonal</option>
-                    <option value="Regularly">Regularly</option>
-                    <option value="Frequent">Frequent</option>           
+                    <option value="Infrequent" {% if shedding == 'Infrequent' %}selected{% endif %}>Infrequent</option>
+                    <option value="Occasional" {% if shedding == 'Occasional' %}selected{% endif %}>Occasional</option>
+                    <option value="Seasonal" {% if shedding == 'Seasonal' %}selected{% endif %}>Seasonal</option>
+                    <option value="Regularly" {% if shedding == 'Regularly' %}selected{% endif %}>Regularly</option>
+                    <option value="Frequent" {% if shedding == 'Frequent' %}selected{% endif %}>Frequent</option>
                 </select>
             </div>
 
             <!-- Numerical Inputs -->
             <div class="filter-item">
                 <label for="min_height">Min Height (in):</label>
-                <input type="number" name="min_height" id="min_height" step="0.01" required>
+                <input type="number" name="min_height" id="min_height" step="0.01" value="{{ min_height }}" required>
             </div>
 
             <div class="filter-item">
                 <label for="max_height">Max Height (in):</label>
-                <input type="number" name="max_height" id="max_height" step="0.01" required>
+                <input type="number" name="max_height" id="max_height" step="0.01" value="{{ max_height }}" required>
             </div>
 
             <div class="filter-item">
                 <label for="min_weight">Min Weight (lbs):</label>
-                <input type="number" name="min_weight" id="min_weight" step="0.01" required>
+                <input type="number" name="min_weight" id="min_weight" step="0.01" value="{{ min_weight }}" required>
             </div>
 
             <div class="filter-item">
                 <label for="max_weight">Max Weight (lbs):</label>
-                <input type="number" name="max_weight" id="max_weight" step="0.01" required>
+                <input type="number" name="max_weight" id="max_weight" step="0.01" value="{{ max_weight }}" required>
             </div>
 
             <div class="filter-item">
                 <label for="min_expectancy">Min Life Expectancy (years):</label>
-                <input type="number" name="min_expectancy" id="min_expectancy" step="0.1" required>
+                <input type="number" name="min_expectancy" id="min_expectancy" step="0.1" value="{{ min_expectancy }}" required>
             </div>
 
             <div class="filter-item">
                 <label for="max_expectancy">Max Life Expectancy (years):</label>
-                <input type="number" name="max_expectancy" id="max_expectancy" step="0.1" required>
+                <input type="number" name="max_expectancy" id="max_expectancy" step="0.1" value="{{ max_expectancy }}" required>
             </div>
 
         </div>
         <button type="submit">🔍 Predict Dog Breed</button>
     </form>
 
-    {% if prediction_text %}
-    <h2>{{ prediction_text }}</h2>
-    <p><strong>Training Time:</strong> {{ training_time }}</p>
-    <p><strong>Prediction Time:</strong> {{ prediction_time }}</p>
-    <p><strong>API Response Time:</strong> {{ api_response_time }}</p>
-    <p><strong>Model Accuracy:</strong> {{ model_accuracy }}</p>
+    {% if prediction_text_xgb and prediction_text_rf %}
+    <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+        <!-- XGBoost Results -->
+        <div style="width: 45%; padding: 20px; background: #f8f9fa; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="text-align: center; color: #f67B28;">XGBoost Prediction</h2>
+            <p><strong>Prediction:</strong> {{ prediction_text_xgb }}</p>
+            <p><strong>Training Time:</strong> {{ training_time_xgb }}</p>
+            <p><strong>Prediction Time:</strong> {{ prediction_time_xgb }}</p>
+            <p><strong>Model Accuracy:</strong> {{ model_accuracy_xgb }}</p>
+        </div>
+
+        <!-- Random Forest Results -->
+        <div style="width: 45%; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+            <h2 style="text-align: center; color: #28a745;">Random Forest Prediction</h2>
+            <p><strong>Prediction:</strong> {{ prediction_text_rf }}</p>
+            <p><strong>Training Time:</strong> {{ training_time_rf }}</p>
+            <p><strong>Prediction Time:</strong> {{ prediction_time_rf }}</p>
+            <p><strong>Model Accuracy:</strong> {{ model_accuracy_rf }}</p>
+        </div>
+    </div>
+
+    <!-- API Response Time -->
+    <div style="text-align: center; margin-top: 20px;">
+        <p><strong>API Response Time:</strong> {{ api_response_time }}</p>
+    </div>
     {% endif %}
 
     <!-- Tableau Viewer Embed -->
