@@ -61,13 +61,13 @@ This project is a web-based application designed to recommend the best dog breed
 ### Web Application:
 - **Flask**
 - **HTML/CSS**
-- **Jinja2** (for dynamic content rendering)
+- **Jinja2** (for dynamic content rendering) did we use this?
 
 ## Project URL
 TBD (Deploy Link if applicable)
 
 ## References
-This project is licensed under the MIT License.
+Data Source: https://www.kaggle.com/datasets/mexwell/dog-breeds-dataset?resource=download
 
 ---
 Enjoy finding your perfect dog breed match! 🐶
