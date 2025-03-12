@@ -1,9 +1,9 @@
-# Project_4_group_4
+# Project 4
 Final Project for UT Data Visualization and Analysis
 
 # Dog Breed Recommendation Model
 
-## Group Members
+## Group 4 Members
 Oana Wright, Brian Hart, Rogelio Cardenas, Adam Butcher
 
 ## Project Overview
