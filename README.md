@@ -31,13 +31,18 @@ This project is a web-based application designed to recommend the best dog breed
 
 ## Visualizations
 
-### Feature Importance Chart
+### Data Statistics by Category
 - Displays the most significant factors influencing breed group recommendations.
+- Users can select which breed characteristics chart they want to see by using the drop down.
 - Helps users understand which traits impact the predictions the most.
+
+![Screenshot 2025-03-11 at 7 33 39 PM](https://github.com/user-attachments/assets/bc2bc1d9-3fad-42b1-a79b-dc0bee681bc1)
 
 ### Model Performance Metrics
 - Accuracy scores for **Random Forest** and **XGBoost** are displayed.
 - Training time and prediction response times are recorded.
+
+![Screenshot 2025-03-11 at 7 31 53 PM](https://github.com/user-attachments/assets/5ac41aea-e28a-4a2f-abed-e1cdbb6d0b18)
 
 ## Additional Features
 
