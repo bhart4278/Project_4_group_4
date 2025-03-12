@@ -7,7 +7,7 @@
 Oana Wright, Brian Hart, Rogelio Cardenas, Adam Butcher
 
 ## Project Overview
-This project is a web-based application designed to recommend the best dog breed group based on user-selected characteristics. We leverage machine learning models, specifically **Random Forest Classifier** and **XGBoost**, to provide accurate predictions. The model utilizes 235 distinct dog breeds for training.
+This project is a web-based application designed to recommend the best dog breed group based on user-selected characteristics. We leverage machine learning models, specifically **Random Forest Classifier** and **XGBoost**, to provide accurate predictions. The model is trained using 235 distinct dog breeds.
 
 ![Screenshot 2025-03-11 at 6 38 36 PM](https://github.com/user-attachments/assets/bb707bee-fb03-4106-84ce-1458e15a977f)
 
