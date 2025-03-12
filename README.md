@@ -29,6 +29,8 @@ This project is a web-based application designed to recommend the best dog breed
 - **RandomizedSearchCV** is used for hyperparameter tuning of Random Forest and XGBoost models.
 - The models are trained, and accuracy scores are evaluated.
 
+  XGBoost improves performance by building new trees based on the residuals (errors) of previous trees, rather than training each tree independently. This iterative process, known as gradient boosting, allows each new tree to correct the mistakes made by the earlier trees. By adding these corrections, XGBoost reduces bias and variance, leading to a more accurate and robust model that can better capture complex relationships in the data.
+
 ## Visualizations
 
 ### Data Statistics by Category
