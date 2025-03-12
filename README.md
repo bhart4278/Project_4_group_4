@@ -56,6 +56,9 @@ This project is a web-based application designed to recommend the best dog breed
 - Predictions are displayed alongside breed group characteristics.
 - Accuracy and processing times are shown for transparency.
 
+![Screenshot 2025-03-11 at 7 54 58 PM](https://github.com/user-attachments/assets/322e3392-01d3-4772-b48d-e997eaf161d5)
+
+
 ## Technology Stack
 
 ### Data Processing:
