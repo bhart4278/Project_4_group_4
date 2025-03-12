@@ -7,7 +7,10 @@ Final Project for UT Data Visualization and Analysis
 Oana Wright, Brian Hart, Rogelio Cardenas, Adam Butcher
 
 ## Project Overview
-This project is a web-based application designed to recommend the best dog breed group based on user-selected characteristics. It leverages machine learning models, specifically **Random Forest Classifier** and **XGBoost**, to provide accurate predictions.
+This project is a web-based application designed to recommend the best dog breed group based on user-selected characteristics. It leverages machine learning models, specifically **Random Forest Classifier** and **XGBoost**, to provide accurate predictions. The model utilizes 235 distinct dog breeds for training.
+
+![Screenshot 2025-03-11 at 6 38 36 PM](https://github.com/user-attachments/assets/bb707bee-fb03-4106-84ce-1458e15a977f)
+
 
 ## How to Use the Application
 - Users input their preferences for dog traits such as energy level, grooming needs, trainability, and demeanor.
@@ -61,14 +64,16 @@ This project is a web-based application designed to recommend the best dog breed
 ### Web Application:
 - **Flask**
 - **HTML/CSS**
-- **Jinja2** (for dynamic content rendering) did we use this?
 
 ## Project URL
 TBD (Deploy Link if applicable)
 
 ## References
+
 Data Source: https://www.kaggle.com/datasets/mexwell/dog-breeds-dataset?resource=download
-Dog Images: https://dogell.com/en#google_vignette
+
+Dog Images: https://dogell.com/en
+
 ---
 Enjoy! 🐶
 
