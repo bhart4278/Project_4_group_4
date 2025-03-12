@@ -68,7 +68,7 @@ TBD (Deploy Link if applicable)
 
 ## References
 Data Source: https://www.kaggle.com/datasets/mexwell/dog-breeds-dataset?resource=download
-
+Dog Images: https://dogell.com/en#google_vignette
 ---
-Enjoy finding your perfect dog breed match! 🐶
+Enjoy! 🐶
 
